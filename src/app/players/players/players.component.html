@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      Players Page
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+  <ion-list>
+    <ion-item button *ngFor="let team of players.data; let i = index">
+      <ion-row>
+      <ion-col>
+      <ion-title>{{team.first_name}}</ion-title>
+    </ion-col>
+    <ion-col>
+      <ion-title>{{team.last_name}}</ion-title>
+    </ion-col>
+    <ion-col>
+      <ion-label>Height(Ft): </ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-label>{{team.height_feet}}</ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-label>Weight(lbs): </ion-label>
+    </ion-col>
+    <ion-col>
+      <ion-label>{{team.weight_pounds}}</ion-label>
+    </ion-col>
+  </ion-row>
+    </ion-item>
+  </ion-list>
+  </ion-grid>
+</ion-content>
