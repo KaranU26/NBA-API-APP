@@ -12,11 +12,12 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { IonicStorageModule } from '@ionic/storage-angular';
 
 @NgModule({
   declarations: [AppComponent, EasternComponent, PlayersComponent, SavedComponent],
   entryComponents: [],
-  imports: [BrowserModule, CommonModule, HttpClientModule, FormsModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, CommonModule, HttpClientModule, IonicStorageModule.forRoot(), FormsModule, IonicModule.forRoot(), AppRoutingModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

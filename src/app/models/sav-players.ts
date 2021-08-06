@@ -1,9 +1,9 @@
 export class SavPlayers {
-  id: string;
+  dateExpiry: string;
   fullName: string;
 
   constructor(i: string, f: string){
-    this.id = i;
+    this.dateExpiry = i;
     this.fullName = f;
   }
 }
